@@ -1,0 +1,15 @@
+This is a test text file that we will try to compress.
+The process of compression, also called encoding will create a file
+that we will then decompress to obtain the same file.
+The algorithm, originally proposed by Huffman, creates a tree of
+symbols, where symbols that appear more frequently are encoded
+using fewer number of bits. The input file is then reread, and
+each symbol is replaced by the bit encoding to achieve the compression.
+The input file can contain extended ASCII characters, including UPPER
+CASE, and also numbers like 1234567890, and also punctuations like
+!@#$%^&*()_+-={}[]\|:;"'<>/?
+The decompression process reverses this entire exercise, creating a
+tree from the metadata stored in the compressed file. This tree
+helps identify the code for each symbol, which is then written to
+the output file to get the original file back.
+In some cases, the last line is not being decoded back correctly.
